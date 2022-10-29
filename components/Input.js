@@ -15,7 +15,7 @@ const Input = () => {
             className="h-12 w-12 rounded-full object-contain"
           />
         </div>
-        <div className="w-[90%]">
+        <div>
           <textarea
             className="w-[100%] bg-transparent outline-none text-[20px]"
             rows="2"
