@@ -1,5 +1,6 @@
 import { useSession } from "next-auth/react";
 import Head from "next/head";
+import Feed from "../components/Feed";
 import Login from "../components/Login";
 import Sidebar from "../components/Sidebar";
 
@@ -19,6 +20,7 @@ export default function Home() {
 
      <main className="relative max-w-[1400px] mx-auto">
       <Sidebar />
+      <Feed />
      </main>
     </div>
   );
