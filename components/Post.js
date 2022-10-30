@@ -3,7 +3,7 @@ import { BsChat } from "react-icons/bs";
 import { FaRetweet } from "react-icons/fa";
 import { AiOutlineHeart, AiOutlineShareAlt, AiFillHeart } from "react-icons/ai";
 import { RiDeleteBin5Line } from "react-icons/ri";
-// import Moment from "react-moment";
+import Moment from "react-moment";
 
 import { db } from "../firebase";
 import { useRouter } from "next/router";
@@ -99,7 +99,7 @@ const Post = ({ id, post }) => {
             <div className="flex">
               <p className="text-gray-500">@{post?.tag} &nbsp;·&nbsp;</p>
               <p className="text-gray-500">
-                {/* <Moment fromNow>{post?.timestamp?.toDate()}</Moment> */}
+                <Moment fromNow>{post?.timestamp?.toDate()}</Moment>
               </p>
             </div>
           </div>

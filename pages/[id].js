@@ -1,14 +1,16 @@
+import React, { useContext } from "react";
 import { getSession, useSession } from "next-auth/react";
-import Head from "next/head";
-import { useContext } from "react";
-import Feed from "../components/Feed";
 import Login from "../components/Login";
-import Modal from "../components/Modal";
 import Sidebar from "../components/Sidebar";
+import Head from "next/head";
 import Trending from "../components/Trending";
+import SinglePost from "../components/SinglePost";
+import Comment from "../components/Comment";
+import { useRouter } from "next/router";
 import { AppContext } from "../context/AppContext";
+import Modal from "../components/Modal";
 
-export default function Home() {
+const PostPage = () => {
   const { data: session } = useSession();
   const [appContext] = useContext(AppContext);
 
@@ -25,14 +27,16 @@ export default function Home() {
       <main className="relative max-w-[1400px] mx-auto">
         <Sidebar />
         <div className="flex gap-6">
-          <Feed />
+          <SinglePost />
           <Trending />
           {appContext?.isModalOpen && <Modal />}
         </div>
       </main>
     </div>
   );
-}
+};
+
+export default PostPage;
 
 export async function getServerSideProps(context) {
   const session = await getSession(context);
