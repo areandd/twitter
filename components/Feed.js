@@ -1,9 +1,9 @@
-import { HiOutlineSparkles } from "react-icons/hi"
+import { HiOutlineSparkles } from "react-icons/hi";
 import React, { useEffect, useState } from "react";
 import { onSnapshot, collection, query, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 import Input from "./Input";
-
+import Post from "./Post";
 
 const Feed = () => {
   const [posts, setPosts] = useState([]);
@@ -26,7 +26,10 @@ const Feed = () => {
         Home
         <HiOutlineSparkles />
       </div>
-     <Input />
+      <Input />
+      {posts.map((post) => (
+        <Post key={post.id} id={post.id} post={post.data} />
+      ))}
     </section>
   );
 };
