@@ -1,20 +1,19 @@
-// Import the functions you need from the SDKs you need
+
 import { initializeApp, getApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDQCtl4ptjP6ZHyb9-ZkssHHTd4ho4UDY8",
-    authDomain: "twitter-2fc4b.firebaseapp.com",
-    projectId: "twitter-2fc4b",
-    storageBucket: "twitter-2fc4b.appspot.com",
-    messagingSenderId: "683369772176",
-    appId: "1:683369772176:web:15eae8c6e6f36a3103d415"
-  };
+  apiKey: "AIzaSyCmmrktVUEckCkqS7rnYH9IfWXKxOW41Ro",
+  authDomain: "twitter-28471.firebaseapp.com",
+  projectId: "twitter-28471",
+  storageBucket: "twitter-28471.appspot.com",
+  messagingSenderId: "472907755627",
+  appId: "1:472907755627:web:e0e7ae1d69bdde29a4c12e"
+};
 
 // Initialize Firebase
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
@@ -23,3 +22,5 @@ const storage = getStorage();
 
 export default app;
 export { db, storage };
+
+
